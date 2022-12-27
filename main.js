@@ -39,9 +39,19 @@
         //     emailInput.value = '';
         //   }
         // }
-let items = document.getElementsByClassName('item');
-items[2].style.backgroundColor = 'red';
-for(let i=0; i<items.length;i++){
-  items[i].getElementsByClassName.fontWeight = 'bold';
+        // GETELEMENTSBYCLASSNAME
+// let items = document.getElementsByClassName('item');
+// items[2].style.backgroundColor = 'red';
+// for(let i=0; i<items.length;i++){
+//   items[i].getElementsByClasli.fontWeight = 'bold';
+// }
+
+// GETELEMENTBYTAGNAME
+let li = document.getElementsByClassName('li');
+li[2].style.backgroundColor = 'red';
+for(let i=0; i<li.length;i++){
+  li[i].getElementsByClassName.fontWeight = 'bold';
 }
+
+
         
