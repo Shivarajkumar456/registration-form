@@ -47,11 +47,44 @@
 // }
 
 // GETELEMENTBYTAGNAME
-let li = document.getElementsByClassName('li');
-li[2].style.backgroundColor = 'red';
-for(let i=0; i<li.length;i++){
-  li[i].getElementsByClassName.fontWeight = 'bold';
+// let li = document.getElementsByClassName('li');
+// li[2].style.backgroundColor = 'red';
+// for(let i=0; i<li.length;i++){
+//   li[i].getElementsByClassName.fontWeight = 'bold';
+// }
+
+// QUERYSELECTOR
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+var input = document.querySelector('input');
+input.value = 'Hello World!';
+
+var submit = document.querySelector('input[type="submit"]');
+submit.value = 'SEND';
+
+var item = document.querySelector('.list-group-item');
+item.style.color = 'red';
+
+var lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'blue';
+
+var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundcolor = 'green';
+var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.display = 'none';
+
+// QUERYSELECTORALL
+const items = document.querySelectorAll("#items li");
+items[1].style.color = "green";
+
+const oddElements = document.querySelectorAll("#items li:nth-child(odd)");
+for (const element of oddElements) {
+  element.style.backgroundColor = "green";
 }
+
+
+
 
 
         
