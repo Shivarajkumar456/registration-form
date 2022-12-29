@@ -54,37 +54,104 @@
 // }
 
 // QUERYSELECTOR
-var header = document.querySelector('#main-header');
-header.style.borderBottom = 'solid 4px #ccc';
+// var header = document.querySelector('#main-header');
+// header.style.borderBottom = 'solid 4px #ccc';
 
-var input = document.querySelector('input');
-input.value = 'Hello World!';
+// var input = document.querySelector('input');
+// input.value = 'Hello World!';
 
-var submit = document.querySelector('input[type="submit"]');
-submit.value = 'SEND';
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = 'SEND';
 
-var item = document.querySelector('.list-group-item');
-item.style.color = 'red';
+// var item = document.querySelector('.list-group-item');
+// item.style.color = 'red';
 
-var lastItem = document.querySelector('.list-group-item:last-child');
-lastItem.style.color = 'blue';
+// var lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
 
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundcolor = 'green';
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display = 'none';
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundcolor = 'green';
+// var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.display = 'none';
 
-// QUERYSELECTORALL
-const items = document.querySelectorAll("#items li");
-items[1].style.color = "green";
+// // QUERYSELECTORALL
+// const items = document.querySelectorAll("#items li");
+// items[1].style.color = "green";
 
-const oddElements = document.querySelectorAll("#items li:nth-child(odd)");
-for (const element of oddElements) {
-  element.style.backgroundColor = "green";
-}
+// const oddElements = document.querySelectorAll("#items li:nth-child(odd)");
+// for (const element of oddElements) {
+//   element.style.backgroundColor = "green";
+// }
+
+// TRAVERSING DOM
+var itemList = document.querySelector('#items');
+// PARENT NODE
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.background = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// PARENT ELEMENT
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.background = 'blue';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// Child Node
+// console.log(itemList.childNodes);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'green';
 
 
+// First Child
+// console.log(itemList.firstChild);
+// firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1'
 
+// Last Child
+// console.log(itemList.lastChild);
+// lastElementChild
+// console.log(itemList.lastElementChild);       
+// itemList.lastElementChild.textContent = 'Hello 4'
 
+// // nextSibling
+// console.log(item.itemList.nextSibling);
+// // nextElemetSibling
+// console.log(itemList.nextElementSibling);
+// // previousSibling
+// console.log(item.itemList.previousSibling);
+// // previousElemetSibling
+// console.log(itemList.previousElementSibling);
 
-        
+// createElement
+var newDiv = document.createElement('div');
+// Add class and ID
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+
+// setAttribute
+newDiv.setAttribute('title', 'Hello div');
+
+// create text node
+var text = document.createTextNode('Hello World!');
+
+// append or add text to div
+newDiv.appendChild(text);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+newDiv.style.fontSize = '30px';
+
+console.log(newDiv);
+container.insertBefore(newDiv,h1);
+
+// add list 
+var listItem = document.getElementsByClassName("list-group-item")[0];
+  var list = document.getElementById("items");
+
+  // Create a new list item with the text "Hello"
+  var newListItem = document.createElement("li");
+  newListItem.innerHTML = "Hello";
+  newListItem.classList.add("list-group-item");
+
+  // Insert the new list item before "Item 1"
+  list.insertBefore(newListItem, listItem);
